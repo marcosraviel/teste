@@ -38,8 +38,8 @@ sudo systemctl restart apache2
 #CONFIGURANDO BD DO WORDPRESS
 sudo mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
 sudo sed -i "s/database_name_here/wordpress/g" /var/www/html/wordpress/wp-config.php
-sudo sed -i "s/username_here/wp_admin/g" /var/www/html/wordpress/wp-config.php 
-sudo sed -i "s/password_here/root/g" /var/www/html/wordpress/wp-config.php
+sudo sed -i "s/username_here/wordpress/g" /var/www/html/wordpress/wp-config.php 
+sudo sed -i "s/password_here/wordpress/g" /var/www/html/wordpress/wp-config.php
 sudo sed -i "s/localhost/$ip_banco/g" /var/www/html/wordpress/wp-config.php
 ## ALTERANDO A LINGUAGEM PARA PORTUGUES BRASILEIRO
 sudo sed -i "s/\$language = ''/\$language = 'pt_BR'/" /var/www/html/wordpress/wp-admin/install.php
